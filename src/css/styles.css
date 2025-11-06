@@ -1,0 +1,78 @@
+/* Small custom styles that augment Bootstrap for a dark / black theme */
+body {
+	background-color: #000; /* black background */
+	color: #e9ecef; /* light text */
+}
+
+/* Keep the main panel visually distinct but dark */
+main > .p-4 {
+	background: #111214; /* near-black card */
+}
+
+.fw-monospace {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
+	color: #c6c6c6;
+}
+
+/* Lighten muted text on dark background */
+.text-light-50 { color: rgba(233,236,239,0.65) !important; }
+
+/* Navbar/link colors */
+.navbar-dark .navbar-brand, .navbar-dark .nav-link { color: #ffffff !important; }
+
+/* Make close button visible in dark modals */
+.btn-close-white {
+	filter: invert(1) saturate(0.2) brightness(1.6);
+}
+
+/* Monthly data grid styles */
+.monthly-data .month-card {
+  background: #1a1a1a;
+  border-color: #2b2b2b !important;
+}
+
+.monthly-data .form-control {
+  border-color: #2b2b2b;
+}
+
+.monthly-data .form-control:focus {
+  border-color: #3b3b3b;
+  box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.1);
+}
+
+.monthly-data .form-floating > .form-control:focus ~ label,
+.monthly-data .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: rgba(255,255,255,0.65);
+  transform: scale(.85) translateY(-0.75rem) translateX(0.15rem);
+}
+
+.monthly-data .form-floating > label {
+  color: rgba(255,255,255,0.5);
+}
+
+/* Currency/number input tweaks */
+.monthly-data input[type="number"] {
+  text-align: right;
+  padding-right: 0.75rem;
+}
+
+/* Make container padding touch-friendly on mobile */
+@media (max-width: 576px) {
+  main.container { padding-left: 1rem; padding-right: 1rem; }
+  .monthly-data .month-card { margin-bottom: 1rem; }
+}/* Tabs styling for dark theme */
+.nav-tabs .nav-link {
+	color: rgba(255,255,255,0.85);
+	border: 1px solid transparent;
+}
+.nav-tabs .nav-link:hover {
+	color: #fff;
+}
+.nav-tabs .nav-link.active {
+	background-color: #111;
+	color: #fff;
+	border-color: #2b2b2b #2b2b2b #111;
+}
+.tab-content .tab-pane .bg-dark.border {
+	border-color: #272729;
+}
